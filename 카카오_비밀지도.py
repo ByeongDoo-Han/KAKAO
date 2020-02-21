@@ -1,13 +1,12 @@
 def solution(n, arr1, arr2):
     answer = []
-    li = []
     for i,j  in zip(arr1,arr2):
         a = bin(i|j)[2:]
         if len(a) != n:
-            li.append(('0'*(n-len(a)) + a).replace('1','#').replace('0',' '))
+            answer.append(('0'*(n-len(a)) + a).replace('1','#').replace('0',' '))
         else:
-            li.append(a.replace('1','#').replace('0',' '))
-    return li
+            answer.append(a.replace('1','#').replace('0',' '))
+    return answer
 
 # solution = lambda n, arr1, arr2: ([''.join(map(lambda x: '#' if x=='1' else ' ', "{0:b}".format(row).zfill(n))) for row in (a|b for a, b in zip(arr1, arr2))])
 
