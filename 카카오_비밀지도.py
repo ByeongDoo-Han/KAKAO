@@ -9,7 +9,7 @@ def solution(n, arr1, arr2):
             li.append(a.replace('1','#').replace('0',' '))
     return li
 
-solution = lambda n, arr1, arr2: ([''.join(map(lambda x: '#' if x=='1' else ' ', "{0:b}".format(row).zfill(n))) for row in (a|b for a, b in zip(arr1, arr2))])
+# solution = lambda n, arr1, arr2: ([''.join(map(lambda x: '#' if x=='1' else ' ', "{0:b}".format(row).zfill(n))) for row in (a|b for a, b in zip(arr1, arr2))])
 
 # 문제 설명
 # 비밀지도
